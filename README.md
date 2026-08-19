@@ -1,7 +1,7 @@
 # Synthetic Alpine bacterial community
 
 # 2026 - experiments performed
-Experiment with 8 bacterial isolates in laboratory. Where all monocultrues and pairs grown at 10 C and 20 C, with abdundances determined by flow cytometry (FC)
+Experiment with 7 bacterial isolates in laboratory. Where all monocultrues and pairs grown at 10 C and 20 C, with abdundances determined by flow cytometry (FC)
 
 ## flow cytometer data
 - from Massimo https://github.com/MACE-laboratory/MACE_flow_cytometry_classifiers/
@@ -46,6 +46,5 @@ Experiment with 8 bacterial isolates in laboratory. Where all monocultrues and p
 - r03_d07	25.05.2026
 - pair_meta tab =	monocultures used to train model, only 1 rep per temp*day
 
-## growth curves 
-- ????s.xlsx (includes read.me tab)
-- ????.R
+## FC validation tests 
+- 
