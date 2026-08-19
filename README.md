@@ -4,7 +4,7 @@
 Experiment with 7 bacterial isolates in laboratory. Where all monocultrues and pairs grown at 10 C and 20 C, with abdundances determined by flow cytometry (FC)
 
 ## flow cytometer data
-- from Massimo https://github.com/MACE-laboratory/MACE_flow_cytometry_classifiers/
+From Massimo https://github.com/MACE-laboratory/MACE_flow_cytometry_classifiers/
 - all_pairwise_stats_round01.csv (accuracy calculations)
 - all_pairwise_stats_round02.csv
 - all_pairwise_stats_round03.csv
@@ -12,7 +12,7 @@ Experiment with 7 bacterial isolates in laboratory. Where all monocultrues and p
 - coculture_pairwise_counts_round2.csv
 - coculture_pairwise_counts_round3.csv
 
-## coculture_pairwise_counts_roundx explained
+## coculture_pairwise_counts_round explained
 - Round, Temp, Day, Date, Well, Community: all these columns match META file (see next section)
 - isolate_A, isolate_B: 06, 12, 16, 20, 23, 32, 43, 56 corresponding to one of the eight unique bacterial isolates
 - count_A, count_B: total "events" determined by FC model, using binary assignment 
@@ -47,4 +47,7 @@ Experiment with 7 bacterial isolates in laboratory. Where all monocultrues and p
 - pair_meta tab =	monocultures used to train model, only 1 rep per temp*day
 
 ## FC validation tests 
+Three Isolates were mixed in ratios of 0.25, 0.5, 0.75 (expected ratios) based from monoculture FC readings, then run on FC and model applied. 
+Ratios calculated from model were then compared to expected
+- fc_ratio_verification.R
 - 
