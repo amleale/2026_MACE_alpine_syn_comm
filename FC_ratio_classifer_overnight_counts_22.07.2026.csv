@@ -1,0 +1,97 @@
+﻿Specimen ID,Specimen,Plate ID,Well ID,Sample,Run Time,All Abs. Count,All Count,P1 Count,P1 Abs. Count
+4,classifier_test,1,A1,Sample1,,0,0,0,0
+4,classifier_test,1,A2,Sample2,,0,0,0,0
+4,classifier_test,1,A3,Sample3,,0,0,0,0
+4,classifier_test,1,A4,Sample4,,0,0,0,0
+4,classifier_test,1,A5,Sample5,,0,0,0,0
+4,classifier_test,1,A6,Sample6,,0,0,0,0
+4,classifier_test,1,A7,Sample7,,0,0,0,0
+4,classifier_test,1,A8,Sample8,,0,0,0,0
+4,classifier_test,1,A9,Sample9,,0,0,0,0
+4,classifier_test,1,A10,Sample10,,0,0,0,0
+4,classifier_test,1,A11,Sample11,,0,0,0,0
+4,classifier_test,1,A12,Sample12,,0,0,0,0
+4,classifier_test,1,B1,Sample13,,0,0,0,0
+4,classifier_test,1,B2,Sample14,,0,0,0,0
+4,classifier_test,1,B3,Sample15,,0,0,0,0
+4,classifier_test,1,B4,Sample16,,0,0,0,0
+4,classifier_test,1,B5,Sample17,,0,0,0,0
+4,classifier_test,1,B6,Sample18,,0,0,0,0
+4,classifier_test,1,B7,Sample19,,0,0,0,0
+4,classifier_test,1,B8,Sample20,,0,0,0,0
+4,classifier_test,1,B9,Sample21,,0,0,0,0
+4,classifier_test,1,B10,Sample22,,0,0,0,0
+4,classifier_test,1,B11,Sample23,,0,0,0,0
+4,classifier_test,1,B12,Sample24,,0,0,0,0
+4,classifier_test,1,C1,Sample25,,0,0,0,0
+4,classifier_test,1,C2,Sample26,,0,0,0,0
+4,classifier_test,1,C3,Sample27,,0,0,0,0
+4,classifier_test,1,C4,Sample28,,0,0,0,0
+4,classifier_test,1,C5,Sample29,,0,0,0,0
+4,classifier_test,1,C6,Sample30,,0,0,0,0
+4,classifier_test,1,C7,Sample31,,0,0,0,0
+4,classifier_test,1,C8,Sample32,,0,0,0,0
+4,classifier_test,1,C9,Sample33,,0,0,0,0
+4,classifier_test,1,C10,Sample34,,0,0,0,0
+4,classifier_test,1,C11,Sample35,,0,0,0,0
+4,classifier_test,1,C12,Sample36,,0,0,0,0
+4,classifier_test,1,D1,Sample37,,0,0,0,0
+4,classifier_test,1,D2,Sample38,,0,0,0,0
+4,classifier_test,1,D3,Sample39,,0,0,0,0
+4,classifier_test,1,D4,Sample40,,0,0,0,0
+4,classifier_test,1,D5,Sample41,,0,0,0,0
+4,classifier_test,1,D6,Sample42,,0,0,0,0
+4,classifier_test,1,D7,Sample43,,0,0,0,0
+4,classifier_test,1,D8,Sample44,,0,0,0,0
+4,classifier_test,1,D9,Sample45,,0,0,0,0
+4,classifier_test,1,D10,Sample46,,0,0,0,0
+4,classifier_test,1,D11,Sample47,,0,0,0,0
+4,classifier_test,1,D12,Sample48,,0,0,0,0
+4,classifier_test,1,E1,Sample49,,0,0,0,0
+4,classifier_test,1,E2,Sample50,,0,0,0,0
+4,classifier_test,1,E3,Sample51,,0,0,0,0
+4,classifier_test,1,E4,Sample52,,0,0,0,0
+4,classifier_test,1,E5,Sample53,,0,0,0,0
+4,classifier_test,1,E6,Sample54,,0,0,0,0
+4,classifier_test,1,E7,Sample55,,0,0,0,0
+4,classifier_test,1,E8,Sample56,,0,0,0,0
+4,classifier_test,1,E9,Sample57,,0,0,0,0
+4,classifier_test,1,E10,Sample58,,0,0,0,0
+4,classifier_test,1,E11,Sample59,,0,0,0,0
+4,classifier_test,1,E12,Sample60,,0,0,0,0
+4,classifier_test,1,F1,Sample61,,0,0,0,0
+4,classifier_test,1,F2,Sample62,,0,0,0,0
+4,classifier_test,1,F3,Sample63,,0,0,0,0
+4,classifier_test,1,F4,Sample64,,0,0,0,0
+4,classifier_test,1,F5,Sample65,,0,0,0,0
+4,classifier_test,1,F6,Sample66,,0,0,0,0
+4,classifier_test,1,F7,Sample67,,0,0,0,0
+4,classifier_test,1,F8,Sample68,,0,0,0,0
+4,classifier_test,1,F9,Sample69,,0,0,0,0
+4,classifier_test,1,F10,Sample70,,0,0,0,0
+4,classifier_test,1,F11,Sample71,,0,0,0,0
+4,classifier_test,1,F12,Sample72,,0,0,0,0
+4,classifier_test,1,G1,Sample73,,0,0,0,0
+4,classifier_test,1,G2,Sample74,,0,0,0,0
+4,classifier_test,1,G3,Sample75,,0,0,0,0
+4,classifier_test,1,G4,Sample76,,0,0,0,0
+4,classifier_test,1,G5,Sample77,,0,0,0,0
+4,classifier_test,1,G6,Sample78,,0,0,0,0
+4,classifier_test,1,G7,Sample79,,0,0,0,0
+4,classifier_test,1,G8,Sample80,,0,0,0,0
+4,classifier_test,1,G9,Sample81,,0,0,0,0
+4,classifier_test,1,G10,Sample82,,0,0,0,0
+4,classifier_test,1,G11,Sample83,,0,0,0,0
+4,classifier_test,1,G12,Sample84,,0,0,0,0
+5,overnight,2,H1,mq,7/22/2026 9:02:26 AM,0,0,0,0
+5,overnight,2,H2,pbs,7/22/2026 9:04:12 AM,0,0,0,0
+5,overnight,2,H3,12_1,7/22/2026 9:06:14 AM,3624,71582,71161,3594
+5,overnight,2,H4,12_2,7/22/2026 9:08:01 AM,3478,68561,67938,3435
+5,overnight,2,H5,16_1,7/22/2026 9:10:03 AM,2386,47237,46876,2361
+5,overnight,2,H6,16_2,7/22/2026 9:11:49 AM,2625,51754,51432,2597
+5,overnight,2,H7,43_1,7/22/2026 9:13:51 AM,236,4701,4247,213
+5,overnight,2,H8,43_2,7/22/2026 9:15:38 AM,272,5420,4994,250
+5,overnight,2,H9,56_1,7/22/2026 9:17:40 AM,3962,78463,78011,3936
+5,overnight,2,H10,56_2,7/22/2026 9:19:26 AM,3941,77985,77158,3896
+5,overnight,2,H11,pbs+syto13,7/22/2026 9:21:28 AM,18.2,362,305,15.3
+5,overnight,2,H12,pbs+syto13+form,7/22/2026 9:23:14 AM,21.5,429,133,6.65
