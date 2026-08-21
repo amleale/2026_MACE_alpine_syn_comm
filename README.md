@@ -8,7 +8,7 @@ From Massimo https://github.com/MACE-laboratory/MACE_flow_cytometry_classifiers/
 - all_pairwise_stats_round01.csv (accuracy calculations)
 - all_pairwise_stats_round02.csv
 - all_pairwise_stats_round03.csv
-- coculture_pairwise_counts_round1.csv (used for R script)
+- coculture_pairwise_counts_round1.csv (output from Massimo's model. Used for R script)
 - coculture_pairwise_counts_round2.csv
 - coculture_pairwise_counts_round3.csv
 
@@ -50,6 +50,9 @@ From Massimo https://github.com/MACE-laboratory/MACE_flow_cytometry_classifiers/
 Three Isolates were mixed in ratios of 0.25, 0.5, 0.75 (expected ratios) based from monoculture FC readings, then run on FC and model applied. 
 Ratios calculated from model were then compared to expected
 - fc_ratio_verification.R
+- FC_ratio_classifer_overnight_counts_22.07.2026.csv (FC counts used to make 25, 50, 75% mixes)
+- FC_ratio_test_info.xlsx (used to calculate volumes from overnight counts to make 25, 50, 75% ratios, also includes a META data) 
+- META_FC_ratio_test.csv (just extracted from FC_ratio_test_info.xlsx)
 
 ## FC vs. OD600 pilots
 Isolates measured OD600, then diluted to 25% concentration, OD600 also measured. Both 100% and 25% cultures then run on FC. FC counts vs. OD600 compared.
