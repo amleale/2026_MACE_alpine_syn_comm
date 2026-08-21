@@ -1,4 +1,4 @@
-setwd("~/Library/CloudStorage/OneDrive-epfl.ch/2025_isolates_alpine_2023_soils/nov2025_jan2026_pilots/flow_cytometer")
+setwd("~/Library/CloudStorage/OneDrive-epfl.ch/2025_isolates_alpine_2023_soils/nov2025_jan2026_pilots/flow_cytometer/OD_vs_FC_pilot")
 
 library(readxl)
 library(dplyr)
@@ -15,8 +15,8 @@ library(viridis)
 counts1 <- read.csv("16012026_alanna_isolate_counts.csv", header = TRUE)
 counts2 <- read.csv("29012026_alanna_isolate_counts.csv", header = TRUE)
 
-meta1 <- readxl::read_xlsx(path = "FC_layouts.xlsx", sheet = "dilutions_16jan2026") # these are all undiluted OD (so 100% OD)
-meta2 <- readxl::read_xlsx(path = "FC_layouts.xlsx", sheet = "dilutions_23jan2026") # these have 25% OD diluted and 100% 
+meta1 <- readxl::read_xlsx(path = "OD_vs_FC_layout.xlsx", sheet = "dilutions_16jan2026") # these are all undiluted OD (so 100% OD)
+meta2 <- readxl::read_xlsx(path = "OD_vs_FC_layout.xlsx", sheet = "dilutions_23jan2026") # these have 25% OD diluted and 100% 
 
 counts1 <- left_join(counts1, meta1, by = "Well.ID")
 counts2 <- left_join(counts2, meta2, by = "Well.ID")
@@ -63,12 +63,12 @@ COUNTS %>%
   labs(y = "log (cells/mL)") +
   # labs(y = "cells/mL") +
   theme_bw()
-ggsave(filename = "raw cells per mL.png", plot = last_plot(), height = 8, width = 10)
+# ggsave(filename = "raw cells per mL.png", plot = last_plot(), height = 8, width = 10)
 
 
 
 ### now associate to OD measurements
-ODs <- readxl::read_xlsx(path = "AML_OD600_96well_20260128_095233_FCvsOD.xlsx", sheet = "forR") # these are all undiluted OD (so 100% OD)
+ODs <- readxl::read_xlsx(path = "OD_vs_FC_AML_OD600_96well_20260128_095233.xlsx", sheet = "forR") 
 # why is 56 missing ???
 
 COUNTS_OD <- left_join(COUNTS, ODs, by = c("Isolate", "OD_per"))
@@ -83,10 +83,7 @@ COUNTS_OD %>%
     y = log1p ((P1.Abs..Count * (Total_vol / Sample_vol))*1000) # deals with zeros
     # y = P1.Abs..Count * (Total_vol / Sample_vol) * 1000
   )) +
-  geom_jitter(
-    width = 0.2,
-    size = 4
-  ) +
+  geom_point(  size = 5) +
   geom_smooth(
     aes(group = Isolate),  # explicitly group by Isolate only
     method = "lm",
@@ -94,12 +91,14 @@ COUNTS_OD %>%
     linewidth = 0.8 ,
     alpha = 1         # override inherited alpha
   ) +
-  scale_alpha_manual(values = c(1, 0.5)) +
+  scale_alpha_manual(values = c(1, 0.4)) +
   # geom_hline(yintercept = log(10^7)) + # add reference label
-  labs(y = "log (cells/mL)") +
+  labs(y = "log (cells/mL)",
+       x = "OD600", 
+       alpha = "culture dilution") +
   # labs(y = "cells/mL") +
-  theme_bw()
-ggsave(filename = "OD vs. cells.png", plot = last_plot(), height = 8, width = 10)
+  theme_bw(  base_size = 16) 
+ggsave(filename = "FigS6_OD_vs_FC.png", plot = last_plot(), height = 8, width = 10)
 
 
 
