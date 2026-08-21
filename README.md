@@ -1,7 +1,7 @@
 # Synthetic Alpine bacterial community
 
 # 2026 - experiments performed
-Experiment with 7 bacterial isolates grown in monocultures and pairwise combos in R2A broth at 10 C and 20 C, with abdundances determined by flow cytometry (FC)
+Experiment with 7 bacterial isolates grown in monocultures and pairwise combos in R2A broth at 10 C and 20 C, with abdundances determined by flow cytometry (FC). Experiment was repeated three independent times, each termed a "Round" (r01, r02, r03). 
 
 ## flow cytometer data
 From Massimo https://github.com/MACE-laboratory/MACE_flow_cytometry_classifiers/
@@ -11,8 +11,11 @@ From Massimo https://github.com/MACE-laboratory/MACE_flow_cytometry_classifiers/
 - coculture_pairwise_counts_round1.csv (output from Massimo's model. Used for R script)
 - coculture_pairwise_counts_round2.csv
 - coculture_pairwise_counts_round3.csv
+- d00_r01 ?? (FC of monocultures used to mix pairs in 1:1 ratio at day00)
+- d00_r02 ??
+- d00_r03 ??
 
-## coculture_pairwise_counts_round explained
+### coculture_pairwise_counts_round explained
 - Round, Temp, Day, Date, Well, Community: all these columns match META file (see next section)
 - isolate_A, isolate_B: 06, 12, 16, 20, 23, 32, 43, 56 corresponding to one of the eight unique bacterial isolates
 - count_A, count_B: total "events" determined by FC model, using binary assignment 
@@ -23,7 +26,7 @@ From Massimo https://github.com/MACE-laboratory/MACE_flow_cytometry_classifiers/
 - filename: original FC raw data file for that unique Round * Temp * Day * Well * Community
 - Sample: 1-96 for 96 wells on plate 
 
-## META excel file 
+### META excel file 
 - Well      :	well on 96-well black flow cytometry plate 
 - Community : numbers s1-s28 are each pair, or monos (ixx), syn comm with all 8, or negative control
 - Day	      : days since inoculation (1, 2, 3, 7)
@@ -55,7 +58,7 @@ Ratios calculated from model were then compared to expected
 - META_FC_ratio_test.csv (just extracted from FC_ratio_test_info.xlsx)
 
 ## FC vs. OD600 pilots
-Isolates measured OD600, then diluted to 25% concentration, OD600 also measured. Both 100% and 25% cultures then run on FC. FC counts vs. OD600 compared.
+Measured OD600 of cultures, then diluted to 25% concentration and OD600 measured again. Both 100% and 25% cultures then run on FC. FC counts vs. OD600 compared.
 - OD_vs_FCcount_v1.R 
 - OD_vs_FC_AML_OD600_96well_20260128_095233.xlsx (OD600 values)
 - 16012026_alanna_isolate_counts.csv (FC counts)
