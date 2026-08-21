@@ -57,6 +57,11 @@ Ratios calculated from model were then compared to expected
 - FC_ratio_test_info.xlsx (used to calculate volumes from overnight counts to make 25, 50, 75% ratios, also includes a META data) 
 - META_FC_ratio_test.csv (just extracted from FC_ratio_test_info.xlsx)
 
+### DNA extractions
+  - tabs "DNA_extract_layout" & "DNA_concentrations" in excel "file FC_ratio_test_info.xlsx"
+  - "DNA_extract_layout" : number refers to mixture number (i.e., 1 to 17 mixtures, listed in META)
+
+
 ## FC vs. OD600 pilots
 Measured OD600 of cultures, then diluted to 25% concentration and OD600 measured again. Both 100% and 25% cultures then run on FC. FC counts vs. OD600 compared.
 - OD_vs_FCcount_v1.R 
