@@ -623,7 +623,7 @@ auc_pairs <- mass_long %>%
     names_prefix = "summ_prob_d0"
   )
 
-auc_pairs %>% filter(if_any(everything(), is.na)) ## PROBLEM...8 NA values for summed_prob_d07
+auc_pairs %>% filter(if_any(everything(), is.na)) ## PROBLEM...8 NA values for summed_prob_d07 (4 wells)
 
 ## manually calculate each section's rectangle (trapezoidal rule), then add together 
 auc_pairs <- auc_pairs %>%
@@ -1009,7 +1009,9 @@ AUC_INTERACT %>%
        title = "B. Isolate-level Interaction") +
   theme_bw(base_size = 16) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
-ggsave(filename = "figures/Fig6A_Isolate_interaction.pdf", plot = last_plot(), height = 7, width = 8)
+# ggsave(filename = "figures/Fig6A_Isolate_interaction.pdf", plot = last_plot(), height = 7, width = 8)
+ggsave(filename = "figures/Fig6A_Isolate_MARTINA.pdf", plot = last_plot(), height = 7, width = 8)
+
 
 
 ## plot mean of pair-level interaction
@@ -1070,6 +1072,7 @@ AUC_INTERACT %>%
   ) +
   theme_bw(base_size = 16) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+ggsave(filename = "figures/Fig6A_pairlevel_interaction.pdf", plot = last_plot(), height = 7, width = 14)
 ggsave(filename = "figures/Fig6A_pairlevel_interaction.pdf", plot = last_plot(), height = 7, width = 14)
 
 
@@ -1148,9 +1151,10 @@ ggsave(filename = "figures/FigS5_AUC_interactions_SIGNIF.pdf", plot = last_plot(
 
 
 
-### pairlevel INTERACTION t-test & anova ####
+#### pairlevel INTERACTION stats ####
 ### checking assumptions https://statsandr.com/blog/anova-in-r/
 
+## t-tests & anova - pairlevel
 ## t.test if pairlevel interactions differ from 0
 # 10C
 t.test(log(pair_interaction) ~ 1, 
@@ -1180,14 +1184,16 @@ shapiro.test(res_aov$residuals) # p = 0.00137
 #        id = FALSE # id = FALSE to remove point identification
 # )
  
-#### pairlevel INTERACTION Kruskall Wallis #####
+#### Kruskall Wallis - pairlevel interaction
 # used for non-normal data https://statsandr.com/blog/kruskal-wallis-test-nonparametric-version-anova/
 kruskal.test(log(pair_interaction) ~ Temp , data = AUC_INTERACT) #p-value = 5.958e-06
 kruskal.test(log(pair_interaction) ~ model_dir , data = AUC_INTERACT) #p-value = 1.769e-10
 kruskal.test(log(pair_interaction) ~ Round , data = AUC_INTERACT) #p-value = 0.03315
 
 
-#### isolate INTERACTION anova #####
+
+#### Isolate INTERACTION stats #####
+##  ANOVA - isolate interaction
 res_aov <- aov(log(isolate_interaction) ~ Temp + Isolate + model_dir + Round + Isolate*Temp + Isolate*model_dir, data = AUC_INTERACT)
 summary(res_aov)
 
@@ -1204,14 +1210,14 @@ hist(res_aov$residuals) # looks normal enough
 shapiro.test(res_aov$residuals)  #p-value = 0.03183
 
 
-#### isolate INTERACTION Kruskall Wallis #####
+#### Kruskall Wallis - isolate interaction
 kruskal.test(log(isolate_interaction) ~ Temp , data = AUC_INTERACT) #p-value = 0.002339
 kruskal.test(log(isolate_interaction) ~ Isolate , data = AUC_INTERACT) #p-value = 2.145e-07
 kruskal.test(log(isolate_interaction) ~ model_dir , data = AUC_INTERACT) #p-value = 0.0001167
 kruskal.test(log(isolate_interaction) ~ Round , data = AUC_INTERACT) #p-value = 0.1453
 
 
-#### Isolate Interactions -  Wilcoxon Rank tests ####
+####  Wilcoxon Rank tests - isolate interaction
 wilcoxon <- AUC_INTERACT %>%
   filter(!is.na(isolate_interaction)) %>%
   mutate(log_interaction = log(isolate_interaction)) %>%
