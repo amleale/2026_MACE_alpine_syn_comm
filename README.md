@@ -50,4 +50,11 @@ From Massimo https://github.com/MACE-laboratory/MACE_flow_cytometry_classifiers/
 Three Isolates were mixed in ratios of 0.25, 0.5, 0.75 (expected ratios) based from monoculture FC readings, then run on FC and model applied. 
 Ratios calculated from model were then compared to expected
 - fc_ratio_verification.R
-- 
+
+## FC vs. OD600 pilots
+Isolates measured OD600, then diluted to 25% concentration, OD600 also measured. Both 100% and 25% cultures then run on FC. FC counts vs. OD600 compared.
+- OD_vs_FCcount_v1.R 
+- OD_vs_FC_AML_OD600_96well_20260128_095233.xlsx (OD600 values)
+- 16012026_alanna_isolate_counts.csv (FC counts)
+- 29012026_alanna_isolate_counts.csv (FC counts)
+- OD_vs_FC_layout.xlsx (META file)
