@@ -1208,12 +1208,12 @@ plot_data_classified %>%
   scale_y_continuous(labels = scales::percent_format(), expand = c(0, 0)) +
   scale_fill_manual(
     values = c(
-      "mutualism"     = "#3C3489",  # purple 800
-      "commensalism"  = "#AFA9EC",  # purple 200
-      "neutralism"    = "#B4B2A9",  # gray 400
-      "amensalism"    = "#FAC775",  # amber 100
-      "exploitation"  = "#EF9F27",  # amber 200
-      "competition"   = "#BA7517"   # amber 600
+      "mutualism"     = "#EF9F27",  
+      "commensalism"  = "#FAC775",  
+      "neutralism"    = "#B4B2A9",  
+      "amensalism"    = "#D6CEEA", 
+      "exploitation"  = "#AFA9EC",  
+      "competition"   = "#3C3489"  
     ),
     name = "Interaction type",
     drop = FALSE  # keep unused levels in the legend if you want a consistent legend across plots
