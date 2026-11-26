@@ -1,7 +1,7 @@
 # Synthetic Alpine bacterial community
 
 # 2026 - experiments performed
-Experiment with 7 bacterial isolates grown in monocultures and pairwise combos in R2A broth at 10 C and 20 C, with abdundances determined by flow cytometry (FC). Experiment was repeated three independent times, each termed a "Round" (r01, r02, r03). 
+Experiment with 7 bacterial isolates grown in monocultures and pairwise combos in R2A broth at 10 C and 20 C, with abundances determined by flow cytometry (FC). Experiment was repeated three independent times, each termed a "Round" (r01, r02, r03). 
 
 ## flow cytometer data
 From Massimo https://github.com/MACE-laboratory/MACE_flow_cytometry_classifiers/
